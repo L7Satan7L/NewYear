@@ -55,7 +55,7 @@ public class UserController {
             mav = new ModelAndView("registration", "registrationForm", userDto);
             return mav;
         }
-        return new ModelAndView("redirect:/");
+        return new ModelAndView("sign-in");
     }
 
     @GetMapping("/")
