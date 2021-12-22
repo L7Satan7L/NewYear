@@ -79,7 +79,8 @@ function showPresentRemoveBox(id) {
     });
     removePresentBut.addEventListener("click", function () {
         const xhttp = new XMLHttpRequest();
-        xhttp.open("DELETE", "http://localhost:8080/profile/deletePresent");
+        var host = window.location.protocol + "//" + window.location.host;
+        xhttp.open("DELETE", host + "/profile/deletePresent");
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({
             "id": id
@@ -126,9 +127,9 @@ function WishCreate() {
     addBox.style.display = "none";
     const name = document.getElementById("name").value;
     const wish = document.getElementById("wish").value;
-
+    var host = window.location.protocol + "//" + window.location.host;
     const xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "http://localhost:8080/profile/addWish");
+    xhttp.open("POST", host + "/profile/addWish");
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify({
         "name": name, "wish": wish
@@ -175,7 +176,8 @@ function wishEdit() {
     const update = document.getElementById("update");
     const update_close = document.getElementById("update_close");
     const xhttp = new XMLHttpRequest();
-    xhttp.open("PUT", "http://localhost:8080/profile/update");
+    var host = window.location.protocol + "//" + window.location.host;
+    xhttp.open("PUT", host + "/profile/update");
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify({
         "id": id, "name": name, "wish": wish
@@ -202,7 +204,8 @@ function showWishDeleteBox(str) {
     })
     delete_button.addEventListener("click", function () {
         const xhttp = new XMLHttpRequest();
-        xhttp.open("DELETE", "http://localhost:8080/profile/delete");
+        var host = window.location.protocol + "//" + window.location.host;
+        xhttp.open("DELETE", host + "/profile/delete");
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({
             "id": id
