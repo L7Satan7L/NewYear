@@ -83,7 +83,8 @@ function showWishGetBox(id) {
     });
     getWishBut.addEventListener("click", function () {
         const xhttp = new XMLHttpRequest();
-        xhttp.open("PUT", "http://localhost:8080/getWish");
+        var host = window.location.protocol + "//" + window.location.host;
+        xhttp.open("PUT", host + "/getWish");
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({
             "id": id
