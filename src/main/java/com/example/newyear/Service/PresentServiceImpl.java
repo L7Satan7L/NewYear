@@ -54,11 +54,4 @@ public class PresentServiceImpl implements PresentService{
         presentRepository.save(present);
     }
 
-    //    @Override
-//    public void saveUpdateOfWish(int id, String name, String wish) {
-//        Wish wish1 = wishRepository.getById(id);
-//        wish1.setName(name);
-//        wish1.setWish(wish);
-//        wishRepository.save(wish1);
-//    }
 }
