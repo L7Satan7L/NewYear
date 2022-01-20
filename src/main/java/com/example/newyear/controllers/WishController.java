@@ -15,11 +15,4 @@ public class WishController {
 
     private final WishServiceImpl wishService;
 
-//    @GetMapping("/")
-//    public String mainPage(Model model){
-//        List<Wish> wishes = wishService.getAllWishes();
-//        model.addAttribute("wishes", wishes);
-//        return "main-wish";
-//    }
-
 }
