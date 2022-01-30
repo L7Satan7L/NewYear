@@ -23,6 +23,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
+@AllArgsConstructor
 @RequestMapping()
 public class UserController {
 
